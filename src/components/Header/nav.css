@@ -1,0 +1,37 @@
+nav .center {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 38px;
+  padding-bottom: 38px;
+}
+
+.cart-logo {
+  display: flex;
+  text-decoration: none;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
+
+.cart-logo .cart-info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 16px;
+}
+
+.cart-logo .cart-info span {
+  font-size: 11px;
+  color: #222222;
+}
+
+.cart-logo .cart-info strong {
+  font-size: 14px;
+  color: #222222;
+}
+
+.logo {
+  height: 23px;
+}

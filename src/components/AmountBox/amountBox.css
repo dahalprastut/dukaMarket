@@ -1,0 +1,50 @@
+.amount-box {
+  color: #222222;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24px 32px;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.amount-box h4 {
+  font-size: 18px;
+}
+
+.amount-box div > div {
+  margin-top: 20px;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid rgba(112, 112, 112, 0.2);
+}
+
+.amount-box .top-amount > div strong {
+  font-size: 16px;
+}
+
+.amount-box .top-amount > div span {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.amount-box .total-amount > div {
+  border: none;
+  padding-top: 0;
+}
+
+.amount-box .total-amount > div small {
+  font-size: 16px;
+}
+
+.amount-box .total-amount button {
+  display: block;
+  cursor: pointer;
+  width: 100%;
+  height: 50px;
+  background-color: #0163d2;
+  font-size: 14px;
+  border: none;
+  color: #fff;
+}
