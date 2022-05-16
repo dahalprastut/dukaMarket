@@ -10,7 +10,6 @@ export default function Cart({
   cartData = [],
   setCartData,
   total,
-  setTotal,
 }) {
   const [data, setData] = useState([]);
 
@@ -116,20 +115,21 @@ export default function Cart({
         )),
       },
     ];
-    const totalVale = cartData.reduce(
-      (prevValue, currentValue) => {
-        return (
-          prevValue +
-          currentValue.price *
-            currentValue.quantity
-        );
-      },
-      0
-    );
-    setTotal(totalVale);
+
+    // setTotal(totalVale);
 
     setData(elements);
   }, [cartData]);
+
+  total = cartData.reduce(
+    (prevValue, currentValue) => {
+      return (
+        prevValue +
+        currentValue.price * currentValue.quantity
+      );
+    },
+    0
+  );
 
   return (
     <div className="cart-page">

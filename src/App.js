@@ -9,7 +9,6 @@ import "./App.css";
 
 function App() {
   const [cartData, setCartData] = useState([]);
-  const [total, setTotal] = useState(0);
   const handleAddToCart = id => {
     const addedItem = data.find(
       el => el.id === id
@@ -18,19 +17,15 @@ function App() {
     setCartData([...cartData, addedItem]);
   };
 
-  useEffect(() => {
-    const totalVale = cartData.reduce(
-      (prevValue, currentValue) => {
-        return (
-          prevValue +
-          currentValue.price *
-            currentValue.quantity
-        );
-      },
-      0
-    );
-    setTotal(totalVale);
-  }, [cartData]);
+  const total = cartData.reduce(
+    (prevValue, currentValue) => {
+      return (
+        prevValue +
+        currentValue.price * currentValue.quantity
+      );
+    },
+    0
+  );
 
   return (
     <div className="App">
@@ -47,7 +42,6 @@ function App() {
             cartData={cartData}
             setCartData={setCartData}
             total={total}
-            setTotal={setTotal}
           />
         </Route>
       </Switch>
